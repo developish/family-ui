@@ -7,12 +7,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Family Members</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div className="FamilyList">
+          <div className="FamilyMember">Brandon</div>
+          <div className="FamilyMember">Becky</div>
+          <div className="FamilyMember">Violet</div>
+          <div className="FamilyMember">Zoey</div>
+        </div>
+
+        <button>Add Family Member</button>
       </div>
     );
   }
