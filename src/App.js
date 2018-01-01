@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 const Person = (props) => <div className="FamilyMember">{props.name}</div>
