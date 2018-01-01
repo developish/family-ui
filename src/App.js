@@ -66,7 +66,12 @@ class App extends Component {
     })
     .then(response => {
       if (response.ok) {
-        this.setState({ familyMembers: [...this.state.familyMembers, name] })
+        let newMembers = [...this.state.familyMembers, {
+          name: name,
+          id: (new Date().getTime())
+        }]
+
+        this.setState({ familyMembers: newMembers })
       } else {
         alert('There was an error saving this member name')
       }
@@ -83,8 +88,8 @@ class App extends Component {
         </header>
 
         <div className="FamilyList">
-          {familyMembers.map(name =>
-            <Person key={name} name={name} />
+          {familyMembers.map(member =>
+            <Person key={member.id} name={member.name} />
           )}
         </div>
 
