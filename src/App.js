@@ -28,7 +28,7 @@ class PersonForm extends Component {
     return(
       <form onSubmit={this.handleSubmit}>
         <label>
-          <input type="text" vaule={this.state.value} onChange={this.handleChange} />
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
 
         <input type="submit" value="Add Family Member" />
