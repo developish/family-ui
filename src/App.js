@@ -8,8 +8,14 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      familyMembers: ['Brandon', 'Becky', 'Violet', 'Zoey']
+      familyMembers: []
     }
+  }
+
+  componentWillMount() {
+    fetch('http://localhost:5000/members')
+      .then(response => response.json())
+      .then(members => this.setState({ familyMembers: members }))
   }
 
   render() {
